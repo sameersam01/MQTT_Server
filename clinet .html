@@ -1,0 +1,12 @@
+<input type="text" id="publishTopic" placeholder="Topic">
+<input type="text" id="publishMessage" placeholder="Message">
+<button onclick="publishMessage()">Publish</button>
+
+<script>
+    function publishMessage() {
+        const topic = document.getElementById('publishTopic').value;
+        const message = document.getElementById('publishMessage').value;
+        client.publish(topic, message);
+        console.log(`Published message: ${message} to topic: ${topic}`);
+    }
+</script>
